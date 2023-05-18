@@ -163,111 +163,111 @@ headers = {'Authorization': 'Bearer ' + accessToken}
 
 
 
-#  Testing scripts below this line
+    #  Testing scripts below this line
 
-#  testing the get request for all categories and functions
-# CHECK
-# categories = set()
-# categories = requests.get('http://localhost:8080/api/v1/categories', headers=headers).json()
+    #  testing the get request for all categories and functions
+    # CHECK
+    # categories = set()
+    # categories = requests.get('http://localhost:8080/api/v1/categories', headers=headers).json()
 
-# CHECK
-# functions = set()
-# functions = requests.get('http://localhost:8080/api/v1/functions', headers=headers).json()
-#
-# print('categories = '+str(categories))
-# print('functions = '+str(functions))
+    # CHECK
+    # functions = set()
+    # functions = requests.get('http://localhost:8080/api/v1/functions', headers=headers).json()
+    #
+    # print('categories = '+str(categories))
+    # print('functions = '+str(functions))
 
-# testing the get request for all nist controls
-# CHECK
-# controls = set()
-# controls = requests.get('http://localhost:8080/api/v1/nist_control/get_all_controls', headers=headers).json()
-#
-# print('controls = '+str(controls))
+    # testing the get request for all nist controls
+    # CHECK
+    # controls = set()
+    # controls = requests.get('http://localhost:8080/api/v1/nist_control/get_all_controls', headers=headers).json()
+    #
+    # print('controls = '+str(controls))
 
-# testing the get request for all hitrust controls
-# CHECK
-# controls = set()
-# controls = requests.get('http://localhost:8080/api/v1/hitrust_control/get_all_controls', headers=headers).json()
-#
-# print('controls = '+str(controls))
+    # testing the get request for all hitrust controls
+    # CHECK
+    # controls = set()
+    # controls = requests.get('http://localhost:8080/api/v1/hitrust_control/get_all_controls', headers=headers).json()
+    #
+    # print('controls = '+str(controls))
 
-# testing the get request for all nist controls by function /api/v1/nist_control/{control_function}
-# CHECK
-# controls = set()
-# control_function = 'PROTECT(PR)'
-# url = f'http://localhost:8080/api/v1/nist_control/by_function/{control_function}'
-# controls = requests.get(url, headers=headers).json()
-#
-# print('controls = '+str(controls))
+    # testing the get request for all nist controls by function /api/v1/nist_control/{control_function}
+    # CHECK
+    # controls = set()
+    # control_function = 'PROTECT(PR)'
+    # url = f'http://localhost:8080/api/v1/nist_control/by_function/{control_function}'
+    # controls = requests.get(url, headers=headers).json()
+    #
+    # print('controls = '+str(controls))
 
-# testing the get request for all nist controls by category
-# CHECK
-# controls = set()
-# control_category = 'Protect: Data Security (PR.DS)'
-# url = f'http://localhost:8080/api/v1/nist_control/by_category/{control_category}'
-# controls = requests.get(url, headers=headers).json()
-#
-# print('controls = '+str(controls))
+    # testing the get request for all nist controls by category
+    # CHECK
+    # controls = set()
+    # control_category = 'Protect: Data Security (PR.DS)'
+    # url = f'http://localhost:8080/api/v1/nist_control/by_category/{control_category}'
+    # controls = requests.get(url, headers=headers).json()
+    #
+    # print('controls = '+str(controls))
 
-# testing the get request for a single hitrust control
-# CHECK
-# control_id = 52
-# url = f'http://localhost:8080/api/v1/hitrust_control/get_one/{control_id}'
-# control = requests.get(url, headers=headers).json()
-#
-# print('control = '+str(control))
+    # testing the get request for a single hitrust control
+    # CHECK
+    # control_id = 52
+    # url = f'http://localhost:8080/api/v1/hitrust_control/get_one/{control_id}'
+    # control = requests.get(url, headers=headers).json()
+    #
+    # print('control = '+str(control))
 
 
-# testing the get request for a single nist control
-# CHECK
-# control_id = 900
-# url = f'http://localhost:8080/api/v1/nist_control/get/{control_id}'
-# control = requests.get(url, headers=headers).json()
-#
-# print('control = '+str(control))
+    # testing the get request for a single nist control
+    # CHECK
+    # control_id = 900
+    # url = f'http://localhost:8080/api/v1/nist_control/get/{control_id}'
+    # control = requests.get(url, headers=headers).json()
+    #
+    # print('control = '+str(control))
 
-# testing the get request for getting all hitrust controls by category
-# CHECK
-# controls = set()
-# control_category = 'Protect: Awareness and Training (PR.AT)'
-# url = f'http://localhost:8080/api/v1/hitrust_control/category/{control_category}'
-# controls = requests.get(url, headers=headers).json()
-#
-# print('controls = '+str(controls))
+    # testing the get request for getting all hitrust controls by category
+    # CHECK
+    # controls = set()
+    # control_category = 'Protect: Awareness and Training (PR.AT)'
+    # url = f'http://localhost:8080/api/v1/hitrust_control/category/{control_category}'
+    # controls = requests.get(url, headers=headers).json()
+    #
+    # print('controls = '+str(controls))
 
-# testing the get request for getting all hitrust controls by function
-# CHECK
-# controls = set()
-# control_category = 'PROTECT(PR)'
-# url = f'http://localhost:8080/api/v1/hitrust_control/function/{control_category}'
-# controls = requests.get(url, headers=headers).json()
-#
-# print('controls = '+str(controls))
+    # testing the get request for getting all hitrust controls by function
+    # CHECK
+    # controls = set()
+    # control_category = 'PROTECT(PR)'
+    # url = f'http://localhost:8080/api/v1/hitrust_control/function/{control_category}'
+    # controls = requests.get(url, headers=headers).json()
+    #
+    # print('controls = '+str(controls))
 
-# testing the get request for finding all hitrust controls by nist mapping
-# CHECK
-# controls = set()
-# nist_mapping = 'PR.AT-1'
-# url = f'http://localhost:8080/api/v1/hitrust_control/mapping/{nist_mapping}'
-# controls = requests.get(url, headers=headers).json()
-#
-# print('controls = '+str(controls))
+    # testing the get request for finding all hitrust controls by nist mapping
+    # CHECK
+    # controls = set()
+    # nist_mapping = 'PR.AT-1'
+    # url = f'http://localhost:8080/api/v1/hitrust_control/mapping/{nist_mapping}'
+    # controls = requests.get(url, headers=headers).json()
+    #
+    # print('controls = '+str(controls))
 
-#  test the get request for finding a nist control by hitrust mapping
-# CHECK
-# control = set()
-# hitrust_mapping = '1442.09f2System.456'
-# url = f'http://localhost:8080/api/v1/nist_control/mapping/{hitrust_mapping}'
-# control = requests.get(url, headers=headers).json()
-#
-# print('control = '+str(control))
+    #  test the get request for finding a nist control by hitrust mapping
+    # CHECK
+    # control = set()
+    # hitrust_mapping = '1442.09f2System.456'
+    # url = f'http://localhost:8080/api/v1/nist_control/mapping/{hitrust_mapping}'
+    # control = requests.get(url, headers=headers).json()
+    #
+    # print('control = '+str(control))
 
-# testing the get request for getting all controls
-# CHECK
-# controls = set()
-# url = f'http://localhost:8080/api/v1/control/get_all_controls'
-# controls = requests.get(url, headers=headers).json()
-#
-# print('controls = '+str(controls))
+    # testing the get request for getting all controls
+    # CHECK
+    # controls = set()
+    # url = f'http://localhost:8080/api/v1/control/get_all_controls'
+    # controls = requests.get(url, headers=headers).json()
+    #
+    # print('controls = '+str(controls))
 
-# testing the get request for getting all
+    # testing the get request for getting all
