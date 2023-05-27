@@ -78,7 +78,7 @@ df.fillna('', inplace=True)
 
 
 # Obtain access token
-payload = "{\"client_id\":\"gDlsZn8ocSc09nSbn3GWgds0gc34MqIY\",\"client_secret\":\"oDK8YufBhG0jynz9EGDnpTA_EfcV4vZXTgTxapv17PhyXX488BFtZtycvEtD8kKt\",\"audience\":\"Controlcognizant Bellevue College\",\"grant_type\":\"client_credentials\"}"
+payload = "{\"client_id\":\"\",\"client_secret\":\"\",\"audience\":\"\",\"grant_type\":\"\"}"
 
 headers = { 'content-type': "application/json" }
 
@@ -86,7 +86,7 @@ context = ssl.create_default_context()
 context.check_hostname = False
 context.verify_mode = ssl.CERT_NONE
 
-conn = http.client.HTTPSConnection("dev-fdttbtxtdt0dkcxz.us.auth0.com", context=context)
+conn = http.client.HTTPSConnection("dev-....us.auth0.com", context=context)
 conn.request('POST', '/oauth/token', payload, headers)
 
 res = conn.getresponse()
